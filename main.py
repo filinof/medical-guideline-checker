@@ -1,9 +1,9 @@
-from fastapi import FastAPI, Request
-from pydantic import BaseModel
-import openai
+from dotenv import load_dotenv
 import os
 
-openai.api_key = os.getenv("OPENAI_API_KEY")
+load_dotenv()
+
+api_key = os.getenv("OPENAI_API_KEY")
 
 app = FastAPI()
 
